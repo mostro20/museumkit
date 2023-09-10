@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.4/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .lang-bg{
+            background: rgba(235,198,52,1);
+        }
+        .custom-gradient {
+            background: rgb(52,235,198);
+background: radial-gradient(circle, rgba(52,235,198,1) 0%, rgba(198,52,235,1) 50%, rgba(235,198,52,1) 100%);
+        }
+        .custom-button-color {
+            background-color: #34ebc6;
+        }
+        .lang-en, .lang-ind {
+            display: none;
+        }
+        .lang-en.active, .lang-ind.active {
+            display: block;
+        }
+    </style>
+    <title>Landing Page</title>
+</head>
+
+<body class="font-sans text-gray-900" style="font-family: 'Roboto Mono', sans-serif;">
+    <div class="lang-bg py-4 px-4 flex justify-between items-center">
+        <!-- Language Switch -->
+        <label for="lang-toggle" class="flex items-center">
+            <input id="lang-toggle" type="checkbox" class="mr-2">
+            <span class="lang-en active text-black">Switch to Bahasa Indonesian</span>
+            <span class="lang-ind text-black">Beralih ke bahasa Inggris</span>
+        </label>
+    </div>
+
+    <!-- Splash Heading Area -->
+    <div class="">
+        <div class="custom-gradient py-4 px-4 flex justify-between items-center">
+            <!-- Hamburger Menu Button -->
+            <div id="menu-toggle" class="cursor-pointer lg:hidden">
+                <div class="bg-black h-1 w-5 mb-1"></div>
+                <div class="bg-black h-1 w-5 mb-1"></div>
+                <div class="bg-black h-1 w-5"></div>
+            </div>
+
+            <!-- Menu -->
+            <ul id="menu" class="hidden">
+                <li class="mr-4"><a href="#">Menu 1</a></li>
+                <li class="mr-4"><a href="#">Menu 2</a></li>
+                <li class="mr-4"><a href="#">Menu 3</a></li>
+                <li class="mr-4"><a href="#">Menu 4</a></li>
+                <li class="mr-4"><a href="#">Menu 5</a></li>
+                <li class="mr-4"><a href="#">Menu 6</a></li>
+                <li class="mr-4"><a href="#">Menu 7</a></li>
+            </ul>
+
+            <h1 class="text-4xl font-bold mb-4 text-black lang-en active">Digital Toolbox for Museums and Artists</h1>
+            <h1 class="text-4xl font-bold mb-4 text-black lang-ind">Kotak Peralatan Digital untuk Museum dan Seniman</h1>
+            <p class="text-xl text-black w-full sm:w-1/2 md:w-1/2 mx-auto lang-en active">
+                This provides a range of free, self-hosted digital tools for small museums and artists to set up their digital presence and manage their Collection or artworks
+            </p>
+            <p class="text-xl text-black w-full sm:w-1/2 md:w-1/2 mx-auto lang-ind">
+                Ini menyediakan berbagai alat digital gratis, di-hosting sendiri untuk museum kecil dan seniman untuk menyiapkan kehadiran digital mereka dan mengelola Koleksi atau karya seni mereka
+            </p>
+        </div>
+
+
+        <!-- Widgets -->
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <!-- Widget 1 -->
+                <div class="bg-white p-8 rounded shadow">
+                    <h2 class="lang-en active text-2xl font-bold dark:text-white">Mapping services</h2>
+                    <h2 class="lang-ind text-2xl font-bold dark:text-white">Layanan pemetaan</h2>
+                    <p class="lang-en active">Place all your content on a collaborative map and build a cultural map of internationally discoverable Indonesian Art</p>
+                    <p class="lang-ind">Tempatkan semua konten Anda pada peta kolaboratif dan bangun peta budaya dari Seni Indonesia yang dapat ditemukan secara internasional</p>
+                    <a href="#" class="lang-en active custom-button-color text-black p-2 rounded mt-4 inline-block">Learn More</a>
+                    <a href="#" class="lang-ind custom-button-color text-black p-2 rounded mt-4 inline-block">Pelajari Lebih Lanjut</a>
+                </div>
+                <!-- Widget 2 -->
+                <div class="bg-white p-8 rounded shadow">
+                    <h2 class="lang-en active text-2xl font-bold dark:text-white">Collection Management Software</h2>
+                    <h2 class="lang-ind text-2xl font-bold dark:text-white">Perangkat Lunak Pengelolaan Koleksi</h2>
+                    <p class="lang-en active">Launch a self hosted Omeka or CollectiveAccess package that can self-hosted for a small price, or join a collaborative free space</p>
+                    <p class="lang-ind">Luncurkan paket Omeka atau CollectiveAccess yang di-hosting sendiri dengan harga yang kecil, atau bergabung dengan ruang kolaboratif gratis</p>
+                    <a href="#" class="lang-en active custom-button-color text-black p-2 rounded mt-4 inline-block">Learn More</a>
+                    <a href="#" class="lang-ind custom-button-color text-black p-2 rounded mt-4 inline-block">Pelajari Lebih Lanjut</a>
+                </div>
+                <!-- Widget 3 -->
+                <div class="bg-white p-8 rounded shadow">
+                    <h2 class="lang-en active text-2xl font-bold dark:text-white">AI image recognition</h2>
+                    <h2 class="lang-ind text-2xl font-bold dark:text-white">Pengenalan gambar AI</h2>
+                    <p class="lang-en active">Access a hosted service to upload images and use AI to recognise colours, patterns and themes, can help with discoverability and cataloguing</p>
+                    <p class="lang-ind">Akses layanan yang di-hosting untuk mengunggah gambar dan menggunakan AI untuk mengenali warna, pola, dan tema, dapat membantu dalam penemuan dan katalogisasi</p>
+                    <a href="#" class="lang-en active custom-button-color text-black p-2 rounded mt-4 inline-block">Learn More</a>
+                    <a href="#" class="lang-ind custom-button-color text-black p-2 rounded mt-4 inline-block">Pelajari Lebih Lanjut</a>
+                </div>
+                <!-- Widget 4 -->
+                <div class="bg-white p-8 rounded shadow">
+                    <h2 class="lang-en active text-2xl font-bold dark:text-white">Cataloguing guides</h2>
+                    <h2 class="lang-ind text-2xl font-bold dark:text-white">Panduan katalogisasi</h2>
+                    <p class="lang-en active">Access documentation on how to set up and describe your Collection or artworks so they can more easily managed</p>
+                    <p class="lang-ind">Akses dokumentasi tentang cara menyiapkan dan mendeskripsikan Koleksi atau karya seni Anda sehingga dapat dikelola dengan lebih mudah</p>
+                    <a href="#" class="lang-en active custom-button-color text-black p-2 rounded mt-4 inline-block">Learn More</a>
+                    <a href="#" class="lang-ind custom-button-color text-black p-2 rounded mt-4 inline-block">Pelajari Lebih Lanjut</a>
+                </div>
+                <!-- Widget 5 -->
+                <div class="bg-white p-8 rounded shadow">
+                    <h2 class="lang-en active text-2xl font-bold dark:text-white">Personal or company website</h2>
+                    <h2 class="lang-ind text-2xl font-bold dark:text-white">Situs web pribadi atau perusahaan</h2>
+                    <p class="lang-en active">Launch a service to generate a static, easy-to-host website for your institution or Gallery</p>
+                    <p class="lang-ind">Luncurkan layanan untuk menghasilkan situs web statis, mudah di-hosting untuk institusi atau Galeri Anda</p>
+                    <a href="#" class="lang-en active custom-button-color text-black p-2 rounded mt-4 inline-block">Learn More</a>
+                    <a href="#" class="lang-ind custom-button-color text-black p-2 rounded mt-4 inline-block">Pelajari Lebih Lanjut</a>
+                </div>
+                <!-- Widget 6 -->
+                <div class="bg-white p-8 rounded shadow">
+                    <h2 class="lang-en active text-2xl font-bold dark:text-white">To be determined</h2>
+                    <h2 class="lang-ind text-2xl font-bold dark:text-white">Akan ditentukan</h2>
+                    <p class="lang-en active">To be determined</p>
+                    <p class="lang-ind">Akan ditentukan</p>
+                    <a href="#" class="lang-en active custom-button-color text-black p-2 rounded mt-4 inline-block">Learn More</a>
+                    <a href="#" class="lang-ind custom-button-color text-black p-2 rounded mt-4 inline-block">Pelajari Lebih Lanjut</a>
+                </div>
+            </div>
+        </div>      
+
+        <!-- Footer -->
+        <div class="border-t mt-12 py-4 bg-gray-100">
+            <div class="container mx-auto px-4 text-center">
+                <p class="text-gray-600">Museum toolkit provided by XXXX. All resources available under Creative Commons 4.0</p>
+            </div>
+        </div>
+
+    </div>
+    
+    <script>
+
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('hidden');
+        });
+
+
+        document.getElementById('lang-toggle').addEventListener('change', function () {
+            let elementsEn = document.querySelectorAll('.lang-en');
+            let elementsInd = document.querySelectorAll('.lang-ind');
+
+            if (this.checked) {
+                elementsEn.forEach(el => el.style.display = 'none');
+                elementsInd.forEach(el => el.style.display = 'block');
+            } else {
+                elementsEn.forEach(el => el.style.display = 'block');
+                elementsInd.forEach(el => el.style.display = 'none');
+            }
+        });
+    </script>
+</body>
+
+</html>
