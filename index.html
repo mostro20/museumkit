@@ -12,13 +12,13 @@
             background: rgba(235,198,52,1);
         }
         .custom-gradient {
-            background: rgb(52,235,198);
-background: radial-gradient(circle, rgba(52,235,198,1) 0%, rgba(198,52,235,1) 50%, rgba(235,198,52,1) 100%);
+            background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(235,198,52,1) 100%);
         }
         .custom-button-color {
-            background-color: #34ebc6;
+            background-color: rgba(235,198,52,1);
         }
-        .lang-en, .lang-ind {
+        .lang-ind {
             display: none;
         }
         .lang-en.active, .lang-ind.active {
@@ -42,29 +42,55 @@ background: radial-gradient(circle, rgba(52,235,198,1) 0%, rgba(198,52,235,1) 50
     <div class="">
         <div class="custom-gradient py-4 px-4 flex justify-between items-center">
             <!-- Hamburger Menu Button -->
-            <div id="menu-toggle" class="cursor-pointer lg:hidden">
+            <div id="menu-toggle" class="cursor-pointer">
                 <div class="bg-black h-1 w-5 mb-1"></div>
                 <div class="bg-black h-1 w-5 mb-1"></div>
                 <div class="bg-black h-1 w-5"></div>
             </div>
 
             <!-- Menu -->
-            <ul id="menu" class="hidden">
-                <li class="mr-4"><a href="#">Menu 1</a></li>
-                <li class="mr-4"><a href="#">Menu 2</a></li>
-                <li class="mr-4"><a href="#">Menu 3</a></li>
-                <li class="mr-4"><a href="#">Menu 4</a></li>
-                <li class="mr-4"><a href="#">Menu 5</a></li>
-                <li class="mr-4"><a href="#">Menu 6</a></li>
-                <li class="mr-4"><a href="#">Menu 7</a></li>
-            </ul>
+            <div id="menu" class="hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center z-50">
+                <ul class="bg-white p-8 rounded-lg shadow-lg">
+                    <li class="mb-4 last:mb-0">
+                        <a class="text-black" href="#">
+                            <span class="lang-en">Mapping services</span>
+                            <span class="lang-ind">Layanan pemetaan</span>
+                        </a>
+                    </li>
+                    <li class="mb-4 last:mb-0">
+                        <a class="text-black" href="#">
+                            <span class="lang-en">Collection Management Software</span>
+                            <span class="lang-ind">Perangkat Lunak Pengelolaan Koleksi</span>
+                        </a>
+                    </li>
+                    <li class="mb-4 last:mb-0">
+                        <a class="text-black" href="#">
+                            <span class="lang-en">AI image recognition</span>
+                            <span class="lang-ind">Pengenalan gambar AI</span>
+                        </a>
+                    </li>
+                    <li class="mb-4 last:mb-0">
+                        <a class="text-black" href="#">
+                            <span class="lang-en">Cataloguing guides</span>
+                            <span class="lang-ind">Panduan katalogisasi</span>
+                        </a>
+                    </li>
+                    <li class="mb-4 last:mb-0">
+                        <a class="text-black" href="#">
+                            <span class="lang-en">Personal or company website</span>
+                            <span class="lang-ind">Situs web pribadi atau perusahaan</span>
+                        </a>
+                    </li>
+                </ul>
+                <button id="close-menu" class="absolute top-4 right-4 p-2 rounded-full bg-white shadow">X</button>
+            </div>            
 
-            <h1 class="text-4xl font-bold mb-4 text-black lang-en active">Digital Toolbox for Museums and Artists</h1>
-            <h1 class="text-4xl font-bold mb-4 text-black lang-ind">Kotak Peralatan Digital untuk Museum dan Seniman</h1>
-            <p class="text-xl text-black w-full sm:w-1/2 md:w-1/2 mx-auto lang-en active">
+            <h1 class="text-4xl font-bold mb-4 pl-8 text-black lang-en active">Digital Toolbox for Museums and Artists</h1>
+            <h1 class="text-4xl font-bold mb-4 pl-8 text-black lang-ind">Kotak Peralatan Digital untuk Museum dan Seniman</h1>
+            <p class="text-xl text-black w-full pr-8 sm:w-1/2 md:w-1/2 mx-auto lang-en active">
                 This provides a range of free, self-hosted digital tools for small museums and artists to set up their digital presence and manage their Collection or artworks
             </p>
-            <p class="text-xl text-black w-full sm:w-1/2 md:w-1/2 mx-auto lang-ind">
+            <p class="text-xl text-black w-full pr-8 sm:w-1/2 md:w-1/2 mx-auto lang-ind">
                 Ini menyediakan berbagai alat digital gratis, di-hosting sendiri untuk museum kecil dan seniman untuk menyiapkan kehadiran digital mereka dan mengelola Koleksi atau karya seni mereka
             </p>
         </div>
@@ -101,7 +127,7 @@ background: radial-gradient(circle, rgba(52,235,198,1) 0%, rgba(198,52,235,1) 50
                     <a href="#" class="lang-ind custom-button-color text-black p-2 rounded mt-4 inline-block">Pelajari Lebih Lanjut</a>
                 </div>
                 <!-- Widget 4 -->
-                <div class="bg-white p-8 rounded shadow">
+                <div class="md:col-span-2 bg-white p-8 rounded shadow">
                     <h2 class="lang-en active text-2xl font-bold dark:text-white">Cataloguing guides</h2>
                     <h2 class="lang-ind text-2xl font-bold dark:text-white">Panduan katalogisasi</h2>
                     <p class="lang-en active">Access documentation on how to set up and describe your Collection or artworks so they can more easily managed</p>
@@ -118,15 +144,7 @@ background: radial-gradient(circle, rgba(52,235,198,1) 0%, rgba(198,52,235,1) 50
                     <a href="#" class="lang-en active custom-button-color text-black p-2 rounded mt-4 inline-block">Learn More</a>
                     <a href="#" class="lang-ind custom-button-color text-black p-2 rounded mt-4 inline-block">Pelajari Lebih Lanjut</a>
                 </div>
-                <!-- Widget 6 -->
-                <div class="bg-white p-8 rounded shadow">
-                    <h2 class="lang-en active text-2xl font-bold dark:text-white">To be determined</h2>
-                    <h2 class="lang-ind text-2xl font-bold dark:text-white">Akan ditentukan</h2>
-                    <p class="lang-en active">To be determined</p>
-                    <p class="lang-ind">Akan ditentukan</p>
-                    <a href="#" class="lang-en active custom-button-color text-black p-2 rounded mt-4 inline-block">Learn More</a>
-                    <a href="#" class="lang-ind custom-button-color text-black p-2 rounded mt-4 inline-block">Pelajari Lebih Lanjut</a>
-                </div>
+
             </div>
         </div>      
 
@@ -141,11 +159,18 @@ background: radial-gradient(circle, rgba(52,235,198,1) 0%, rgba(198,52,235,1) 50
     
     <script>
 
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            var menu = document.getElementById('menu');
-            menu.classList.toggle('hidden');
+        document.getElementById("menu-toggle").addEventListener("click", function() {
+            var menu = document.getElementById("menu");
+            if (menu.classList.contains("hidden")) {
+                menu.classList.remove("hidden");
+            } else {
+                menu.classList.add("hidden");
+            }
         });
 
+        document.getElementById("close-menu").addEventListener("click", function() {
+            document.getElementById("menu").classList.add("hidden");
+        });
 
         document.getElementById('lang-toggle').addEventListener('change', function () {
             let elementsEn = document.querySelectorAll('.lang-en');
