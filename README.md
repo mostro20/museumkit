@@ -1,6 +1,6 @@
 # MuseuKit: Alat Digital Terbuka untuk Museum dan Seniman
 
-EN - museumkit - a toolkit for small museums and practioners in Indonesia.
+EN - museumkit - a toolkit for small museums and practitioners in Indonesia.
 IN - MuseuKit: Alat Digital Terbuka untuk Museum dan Seniman
 
 ## About the repository / Tentang repositori
